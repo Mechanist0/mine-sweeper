@@ -14,7 +14,6 @@ class TestNearby(unittest.TestCase):
                         [1, 1]] ## 2 2
         corners_test_grid = TileGrid.TileGrid(1, 1, 10, 0, corners_grid)
         corners_test_grid.build_grid()
-        corners_test_grid.calculate_nearby()
         corners_test_grid.peak_danger_grid()
 
         self.assertEqual(3, corners_test_grid.grid[0][0].danger)
@@ -30,7 +29,6 @@ class TestNearby(unittest.TestCase):
 
         corners_test_grid_2 = TileGrid.TileGrid(1, 1, 10, 0, corners_grid_2)
         corners_test_grid_2.build_grid()
-        corners_test_grid_2.calculate_nearby()
         corners_test_grid_2.peak_danger_grid()
 
         self.assertEqual(3, corners_test_grid_2.grid[0][0].danger)
@@ -46,7 +44,6 @@ class TestNearby(unittest.TestCase):
 
         test_edges_grid = TileGrid.TileGrid(1, 1, 10, 0, edges_grid)
         test_edges_grid.build_grid()
-        test_edges_grid.calculate_nearby()
         test_edges_grid.peak_danger_grid()
 
         # Top edge
@@ -73,7 +70,6 @@ class TestNearby(unittest.TestCase):
 
         test_edges_grid_2 = TileGrid.TileGrid(1, 1, 10, 0, edges_grid_2)
         test_edges_grid_2.build_grid()
-        test_edges_grid_2.calculate_nearby()
         test_edges_grid_2.peak_danger_grid()
 
         # Top edge
@@ -102,7 +98,6 @@ class TestNearby(unittest.TestCase):
 
         test_middle_grid = TileGrid.TileGrid(1, 1, 10, 0, middle_grid)
         test_middle_grid.build_grid()
-        test_middle_grid.calculate_nearby()
         test_middle_grid.peak_danger_grid()
 
         self.assertEqual(3, test_middle_grid.grid[1][1].danger)
@@ -120,7 +115,6 @@ class TestNearby(unittest.TestCase):
 
         test_middle_grid_2 = TileGrid.TileGrid(1, 1, 10, 0, middle_grid_2)
         test_middle_grid_2.build_grid()
-        test_middle_grid_2.calculate_nearby()
         test_middle_grid_2.peak_danger_grid()
 
         self.assertEqual(6, test_middle_grid_2.grid[1][1].danger)
