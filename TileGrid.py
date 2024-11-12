@@ -144,7 +144,6 @@ class TileGrid:
         tiles_to_uncover.append(self.grid[y][x])
         tiles_to_search.extend(self.get_surrounding(x, y))
 
-        print(tiles_to_search)
         while len(tiles_to_search) != 0:
             for tile in tiles_to_search:
                 if tile.danger > 0:
@@ -160,9 +159,6 @@ class TileGrid:
 
         for tile in tiles_to_uncover:
             tile.state = 2
-
-    def handle_action(self, x, y, flag):
-        self.uncover_tile(x, y, flag)
 
 
     def draw_grid(self, screen):

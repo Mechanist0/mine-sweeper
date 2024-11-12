@@ -7,22 +7,21 @@ class Tile:
         self.x = x
         self.y = y
         self.size = size
+
+        self.armed = armed
+
         self.danger = 0
 
         # 0:Closed, 1:Flagged, 2:Opened
         self.state = 0
 
-        self.armed = armed
-
         self.my_font = pygame.font.SysFont('Comic Sans MS', 30)
-
-
 
     def draw(self, screen: Surface):
         # Draw the tile on the screen
         if self.state == 0:
             pygame.draw.rect(screen, (0, 0, 0), (self.x, self.y, self.size, self.size))
-            pygame.draw.rect(screen, (255, 255, 255), (self.x+1, self.y+1, self.size-1, self.size-1))
+            pygame.draw.rect(screen, (255, 255, 255), (self.x+1, self.y+1, self.size-2, self.size-2))
         elif self.state == 1:
             pygame.draw.rect(screen, (0, 0, 255), (self.x, self.y, self.size, self.size))
         elif self.state == 2:
