@@ -4,8 +4,11 @@ This project is a basic implementation of the classic Minesweeper game using Pyt
 Features
 
     Randomized Mine Placement: Each game includes randomly placed mines across the grid.
+    
     Flagging Mines: Right-click to flag a tile if you think it's a mine.
+    
     Safe Zone Uncovering: Left-click on tiles to reveal them, with safe zones uncovering surrounding tiles.
+    
     Win and Lose Conditions: Win by flagging all mines correctly; lose if you uncover a mine.
 
 # Getting Started
